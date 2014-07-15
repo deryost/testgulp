@@ -1,0 +1,29 @@
+@import "tags";
+
+// vars
+@base: #ab38f9;
+
+body {
+	background: #f0f;
+  color: #f0f;
+}
+
+// box shadow
+.box-shadow(@style, @c) when (iscolor(@c)) {
+  box-shadow:         @style @c;
+}
+.box-shadow(@style, @alpha: 20%) when (isnumber(@alpha)) {
+  .box-shadow(@style, rgba(0, 0, 0, @alpha));
+}
+
+// box
+.box {
+  color: saturate(@base, 5%);
+  border-color: lighten(@base, 30%);
+
+  div { 
+  	.box-shadow(0 0 3px, 70%); 
+  	background-color: #666; 
+    padding: 20px;
+  }
+}

@@ -1,0 +1,10 @@
+*Thumbs.db
+*.DS_Store
+
+/node_modules
+
+/build
+
+#sublime-text
+TestsGrunt.sublime-project
+TestsGrunt.sublime-workspace
